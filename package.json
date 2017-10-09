@@ -1,11 +1,11 @@
 {
   "name": "storybook-react-demo",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0-semantically-released",
+  "description": "A storybook react demonstration for #ATO2017",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/priley86/storybook-react-demo.git"
+    "url": "https://github.com/priley86/storybook-react-demo.git"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.11",
@@ -33,16 +33,30 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-test-renderer": "^16.0.0"
-  },
-  "jest": {
-    "collectCoverage": true
+    "react-test-renderer": "^16.0.0",
+    "babel-cli": "^6.24.0",
+    "@commitlint/cli": "^4.1.0",
+    "commitizen": "^2.9.6",
+    "commitlint-config-cz": "^0.5.0",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "semantic-release": "^8.0.3"
   },
   "scripts": {
+    "commit": "git-cz",
+    "commitmsg": "commitlint -e",
+    "build": "babel src --out-dir lib --ignore test.js,__mocks__",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "npm run lint && jest",
     "lint": "eslint --max-warnings 0 src .storybook",
     "prettier": "prettier --write --single-quote --no-semi '{src,.storybook}/**/*.js'",
     "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "jest": {
+    "collectCoverage": true
   },
   "peerDependencies": {
     "prop-types": "^15.6.0",
