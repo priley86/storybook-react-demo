@@ -4,6 +4,7 @@ exports[`Button renders properly 1`] = `
 <button
   disabled={true}
   onClick={[Function]}
+  style={undefined}
 >
   Hello Jest Snapshot! 📸
 </button>
