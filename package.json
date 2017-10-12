@@ -40,7 +40,8 @@
     "commitlint-config-cz": "^0.5.0",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
-    "semantic-release": "^8.0.3"
+    "semantic-release": "^8.0.3",
+    "@storybook/storybook-deployer": "^2.0.0"
   },
   "scripts": {
     "commit": "git-cz",
@@ -50,7 +51,9 @@
     "test": "npm run lint && jest",
     "lint": "eslint --max-warnings 0 src .storybook",
     "prettier": "prettier --write --single-quote --no-semi '{src,.storybook}/**/*.js'",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -o .out",
+    "storybook:deploy": "storybook-to-ghpages"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
