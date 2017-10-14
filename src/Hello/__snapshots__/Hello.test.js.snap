@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello renders default properly 1`] = `
+<hello-component
+  class="btn-primary"
+>
+  Hello Web Component Snapshot! 📸
+</hello-component>
+`;

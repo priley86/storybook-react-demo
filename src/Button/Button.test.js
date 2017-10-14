@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Button } from '../index.js'
+import { default as Button } from './Button.js'
 
 test('Button renders properly', () => {
   const handleButtonClick = jest.fn()
